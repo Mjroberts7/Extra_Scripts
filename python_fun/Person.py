@@ -1,4 +1,6 @@
+import random 
 class Person():
+    list: color = [black, red, blue, green, white, pink, purple]
     def __init__(self, name, body_type):
         self.name = name
         self.body_type = body_type
@@ -17,3 +19,12 @@ class Person():
         self.toes = toes
         number_of_toes = 10
         toes_per_foot = 5
+    
+    def outfit(self, pants, shirt, shoes):
+        self.pants = pants
+        self.shirt = shirt
+        self.shoes = shoes
+
+def pick_color(cloth):
+    color_of_cloth = random.choice(cloth)
+    return color_of_cloth
